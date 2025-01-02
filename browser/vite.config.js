@@ -22,6 +22,12 @@ const wasmContentTypePlugin = {
 export default defineConfig(({ command }) => {
     if (command === 'serve') {
         return {
+            server: {
+                headers: {
+                    'Cross-Origin-Embedder-Policy': 'require-corp',
+                    'Cross-Origin-Opener-Policy': 'same-origin',
+                }
+            },
             build: {
                 target: 'esnext',
                 rollupOptions: {
