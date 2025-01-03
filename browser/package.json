@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "compile-circuits": "cd ../main && nargo compile && cd ../recursion && nargo compile"
   },
   "devDependencies": {
     "rollup-plugin-copy": "^3.5.0",
